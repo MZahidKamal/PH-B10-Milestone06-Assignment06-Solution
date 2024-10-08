@@ -1,0 +1,566 @@
+<!doctype html>
+<!--It indicates the document type.-->
+
+<html lang="en" data-theme="light">
+<!--It indicates the language of the document is English and the theme is by default light.-->
+
+
+<!--HEAD SECTION STARTS HERE------------------------------------------------------------------------------------------->
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!--These are some Meta tags, which provide metadata about a webpage, aiding in SEO and responsive design.-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <!--Here linking the Lato Font with this html page through link tags provided by Google Fonts.-->
+
+    <script src="https://kit.fontawesome.com/4f03f216dd.js" crossorigin="anonymous"></script>
+    <!--Here linking the Fontawesome Kit through CDN with this html page.-->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <!--Here linking the Daisy UI through CDN with this html page.-->
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Here linking the external style.css file with this html page.-->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Here linking the Tailwind CSS through Tailwind CLI with this html page.-->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                        black01: "#131313",
+                        gray01: "#5A5A5A",
+                        green01: "#0E7A81",
+                    },
+                    fontFamily: {
+                        lato: ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <!--Here linking the 'tailwind.config' object with this html page, to customize my configuration with my own design tokens.-->
+
+    <title>PEDDY Pet</title>
+    <!--This is the title of this page-->
+</head>
+<!--HEAD SECTION ENDS HERE--------------------------------------------------------------------------------------------->
+
+
+<!--BODY SECTION STARTS HERE------------------------------------------------------------------------------------------->
+<body class="font-lato">
+
+
+<!--HEADER SECTION STARTS HERE----------------------------------------------------------------------------------------->
+<header>
+    <nav class="">
+        <div class="container 2xl:w-full xl:w-full lg:w-11/12 md:w-11/12 sm:w-11/12 w-11/12 mx-auto py-8 grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-2 2xl:order-1 xl:order-1 lg:order-1 md:order-1 sm:order-1 order-1 2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
+
+            <!-- NAV LEFT: MAIN LOGO -->
+            <div class="flex justify-start items-center gap-3">
+                <img src="./images/logo.webp" alt="logo_image">
+                <h1 class="text-4xl text-black01 font-extrabold">Peddy</h1>
+            </div>
+
+            <!-- NAV MIDDLE: MENU LINKS -->
+            <div class="2xl:flex xl:flex lg:flex md:flex sm:hidden hidden justify-center items-center 2xl:order-2 xl:order-2 lg:order-2 md:order-3 sm:order-3 order-3 2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-2 sm:col-span-2 col-span-2">
+                <ul class="flex gap-16">
+                    <li class="text-lg hover:text-green-500 hover:text-xl hover:font-bold font-normal text-gray01 cursor-pointer">
+                        Home
+                    </li>
+                    <li class="text-lg hover:text-green-500 hover:text-xl hover:font-bold font-normal text-gray01 cursor-pointer">
+                        Shop
+                    </li>
+                    <li class="text-lg hover:text-green-500 hover:text-xl hover:font-bold font-normal text-gray01 cursor-pointer">
+                        Contact
+                    </li>
+                </ul>
+            </div>
+
+            <!-- NAV RIGHT: PROFILE ICON -->
+            <div class="flex justify-end items-center 2xl:order-3 xl:order-3 lg:order-3 md:order-2 sm:order-2 order-2 2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-1 col-span-1">
+
+                <!-- PROFILE ONLY BUTTON -->
+                <div class="2xl:block xl:block lg:block md:block sm:hidden hidden">
+                    <div class="border-2 w-16 h-16 rounded-full flex justify-center items-center cursor-pointer hover:border-green-300 hover:bg-green-500/5">
+                        <i class="fa-regular fa-user text-xl text-gray01 hover:text-green01"></i>
+                    </div>
+                </div>
+
+                <!-- COLLAPSED MENU BUTTON -->
+                <div class="2xl:hidden xl:hidden lg:hidden md:hidden sm:block block">
+                    <details>
+                        <summary
+                                class="border-2 w-16 h-16 rounded-full flex justify-center items-center cursor-pointer hover:border-green-300 hover:bg-green-500/5">
+                            <i class="fa-solid fa-bars text-xl text-gray01 hover:text-green01"></i>
+                        </summary>
+                        <ul class="bg-base-100 rounded-t-none p-2">
+                            <li class="text-lg hover:text-green-500 hover:text-xl hover:font-bold font-normal text-gray01 cursor-pointer">
+                                Profile
+                            </li>
+                            <li class="text-lg hover:text-green-500 hover:text-xl hover:font-bold font-normal text-gray01 cursor-pointer">
+                                Home
+                            </li>
+                            <li class="text-lg hover:text-green-500 hover:text-xl hover:font-bold font-normal text-gray01 cursor-pointer">
+                                Shop
+                            </li>
+                            <li class="text-lg hover:text-green-500 hover:text-xl hover:font-bold font-normal text-gray01 cursor-pointer">
+                                Contact
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+</header>
+<!--HEADER SECTION ENDS HERE------------------------------------------------------------------------------------------->
+
+
+<!--MAIN SECTION STARTS HERE------------------------------------------------------------------------------------------->
+<main>
+
+    <!-- YOUR PATH TO ADOPTION SECTION -->
+    <section class="">
+        <div class="container mx-auto py-5 flex flex-col justify-center items-center">
+            <div class="2xl:w-6/12 xl:w-8/12 lg:w-8/12 md:w-9/12 sm:w-9/12 w-11/12 flex flex-col justify-center items-center gap-8">
+                <h3 class="text-2xl text-black01/60 font-bold text-center">Bringing Families Together 🔥</h3>
+                <h1 class="2xl:text-7xl xl:text-7xl lg:text-6xl md:text-6xl sm:text-6xl text-5xl text-black01 font-bold text-center">
+                    Your Path to Adoption Starts Here</h1>
+                <p class="text-base text-black01 font-normal text-center">Every pet deserves a loving home, and every
+                    family deserves the joy that comes with it. Start your journey to unconditional companionship
+                    today.</p>
+                <button id="view-more-button"
+                        class="btn btn-lg w-44 bg-green01 text-xl text-white font-bold rounded-xl hover:border-green01 hover:bg-green-500/10 hover:text-green01">
+                    View More
+                </button>
+                <img src="./images/banner-pet.webp" alt="cat_on_dog_image">
+            </div>
+        </div>
+    </section>
+
+    <!-- ADOPT YOUR BEST FRIEND SECTION -->
+    <section class="">
+        <div id="adopt-your-best-friend-section"
+             class="container mx-auto py-8 flex flex-col justify-center items-center gap-8">
+
+            <!-- TEXT PART -->
+            <div class="2xl:w-5/12 xl:w-6/12 lg:w-8/12 md:w-9/12 sm:w-9/12 w-10/12 flex flex-col justify-center items-center gap-8">
+                <h1 class="text-4xl text-black01 font-extrabold text-center">Adopt Your Best Friend</h1>
+                <p class="text-base text-black01 font-normal text-center">Find your perfect companion among our furry
+                    friends, waiting to fill your life with joy and unconditional love. A bond that lasts a lifetime
+                    begins with adoption.</p>
+            </div>
+
+            <!-- CATEGORY BUTTONS PART -->
+            <div id="dynamic-button-container"
+                 class="2xl:w-full xl:w-11/12 lg:w-10/12 md:w-11/12 sm:w-11/12 w-8/12 grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 justify-center items-center 2xl:gap-x-24 xl:gap-x-10 lg:gap-x-10 md:gap-x-8 sm:gap-x-8 gap-x-0 2xl:gap-y-0 xl:gap-y-0 lg:gap-y-4 md:gap-y-4 sm:gap-y-4 gap-y-4">
+
+                <!-- DOGS BUTTON -->
+                <!-- <div class="hidden flex justify-center items-center">
+                     <div class="border-2 btn w-full h-24 bg-transparent rounded-xl flex justify-center items-center gap-5 cursor-pointer hover:border-green-300 hover:bg-green-500/5 hover:rounded-full transition-all duration-100">
+                         <img src="./images/button-pets-hd/dog.png" alt="dog_image" class="w-10">
+                         <h3 class="text-2xl text-black01 font-extrabold text-center">Dogs</h3>
+                     </div>
+                 </div>-->
+
+                <!-- CATS BUTTON -->
+                <!--<div class="hidden flex justify-center items-center">
+                    <div class="border-2 btn w-full h-24 bg-transparent rounded-xl flex justify-center items-center gap-5 cursor-pointer hover:border-green-300 hover:bg-green-500/5 hover:rounded-full transition-all duration-100">
+                        <img src="./images/button-pets-hd/cat.png" alt="dog_image" class="w-12">
+                        <h3 class="text-2xl text-black01 font-extrabold text-center">Cats</h3>
+                    </div>
+                </div>-->
+
+                <!-- RABBITS BUTTON -->
+                <!--<div class="hidden flex justify-center items-center">
+                    <div class="border-2 btn w-full h-24 bg-transparent rounded-xl flex justify-center items-center gap-5 cursor-pointer hover:border-green-300 hover:bg-green-500/5 hover:rounded-full transition-all duration-100">
+                        <img src="./images/button-pets-hd/rabbit.png" alt="dog_image" class="w-12">
+                        <h3 class="text-2xl text-black01 font-extrabold text-center">Rabbits</h3>
+                    </div>
+                </div>-->
+
+                <!-- BIRDS BUTTON -->
+                <!--<div class="hidden flex justify-center items-center">
+                    <div class="border-2 btn w-full h-24 bg-transparent rounded-xl flex justify-center items-center gap-5 cursor-pointer hover:border-green-300 hover:bg-green-500/5 hover:rounded-full transition-all duration-100">
+                        <img src="./images/button-pets-hd/bird.png" alt="dog_image" class="w-16">
+                        <h3 class="text-2xl text-black01 font-extrabold text-center">Birds</h3>
+                    </div>
+                </div>-->
+
+            </div>
+
+            <!-- BEST DEAL & SORT BUTTON PART -->
+            <div class="2xl:w-full xl:w-11/12 lg:w-10/12 md:w-11/12 sm:w-11/12 w-11/12 flex flex-wrap 2xl:justify-between xl:justify-between lg:justify-between md:justify-between sm:justify-between justify-center items-center gap-5">
+                <h3 class="text-2xl text-black01 font-extrabold text-center">Best Deal For you</h3>
+                <button onclick="loadPetCardsSortedByPriceDescending()"
+                        class="btn btn-lg w-48 bg-green01 text-xl text-white font-bold rounded-xl hover:border-green01 hover:bg-green-500/10 hover:text-green01">
+                    Sort by Price
+                </button>
+            </div>
+
+            <!-- CARDS & CART PART -->
+            <div class="w-full grid 2xl:grid-cols-4 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  grid-cols-1 justify-between items-start 2xl:gap-x-5 xl:gap-y-5 lg:gap-y-5 md:gap-y-5 sm:gap-y-5 gap-y-5">
+
+                <!-- ALL CARDS -->
+                <div id="dynamic-pet-card-container"
+                     class="col-span-3 2xl:mx-0 xl:mx-auto lg:mx-auto md:mx-auto sm:mx-auto mx-auto grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-5 order-1">
+
+                    <!-- EMPTY BADGE -->
+                    <!--<div id="empty-pet-card-badge" class="hide no-card-banner border bg-gray-200/50 rounded-xl 2xl:w-full xl:w-full lg:w-11/12 md:w-11/12 sm:w-11/12 w-11/12 mx-auto col-span-3 2xl:px-64 xl:px-64 lg:px-32 md:px-16 sm:px-10 px-10 2xl:py-28 xl:py-20 lg:py-20 md:py-20 sm:py-20 py-20 flex flex-col justify-center items-center hover:border-green-300 hover:bg-green-500/5">
+                        <img src="./images/error.webp" alt="error-image">
+                        <h3 class="text-4xl text-black01 font-extrabold text-center">No Information Available</h3>
+                        <p class="text-base text-black01 font-normal text-center">It is a long established fact that a
+                            reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                    </div>-->
+
+                    <!-- CARD 01 -->
+                    <!--<div class="pet-card border-2 border-gray-200 rounded-xl max-w-[365px] p-6 flex flex-col justify-center items-center cursor-pointer hover:border-green-300 hover:bg-green-500/5">
+                        <div class="pet-image w-full relative">
+                            <img src="./images/rectangle-thumbnails/card-01.png" alt="card-image-01"
+                                 class="w-full h-full rounded-xl object-cover object-center">
+                        </div>
+                        <div class="border-b pet-info w-full py-4 flex flex-col gap-2">
+                            <h4 class="text-2xl font-bold">Mister Tartosh</h4>
+                            <div class="line-1 flex items-center gap-3">
+                                <img src="./images/tiny-icons/breed.png" alt="breed-icon">
+                                <p>Breed: <span>Golder retriever</span></p>
+                            </div>
+                            <div class="line-2 flex items-center gap-3">
+                                <img src="./images/tiny-icons/birth.png" alt="birth-icon">
+                                <p>Birth: <span>2024</span></p>
+                            </div>
+                            <div class="line-3 flex items-center gap-3">
+                                <img src="./images/tiny-icons/gender.png" alt="gender-icon">
+                                <p>Gender: <span>Female</span></p>
+                            </div>
+                            <div class="line-4 flex items-center gap-3">
+                                <img src="./images/tiny-icons/price.png" alt="price-icon">
+                                <p>Price: <span>199</span>$</p>
+                            </div>
+                        </div>
+                        <div class="card-buttons w-full pt-4 flex justify-between items-center">
+                            <div class="btn border border-gray-200 bg-white">
+                                <img src="./images/tiny-icons/like.png" alt="">
+                            </div>
+                            <div class="btn border border-gray-200 bg-white w-28 text-lg text-green01">Adopt</div>
+                            <div class="btn border border-gray-200 bg-white w-28 text-lg text-green01">Details</div>
+                        </div>
+                    </div>-->
+
+                    <!-- CARD 02 -->
+                    <!--<div class="pet-card border-2 border-gray-200 rounded-xl max-w-[365px] p-6 flex flex-col justify-center items-center cursor-pointer hover:border-green-300 hover:bg-green-500/5">
+                        <div class="pet-image w-full relative">
+                            <img src="./images/rectangle-thumbnails/card-02.png" alt="card-image-01"
+                                 class="w-full h-full rounded-xl object-cover object-center">
+                        </div>
+                        <div class="border-b pet-info w-full py-4 flex flex-col gap-2">
+                            <h4 class="text-2xl font-bold">Mister Tartosh</h4>
+                            <div class="line-1 flex items-center gap-3">
+                                <img src="./images/tiny-icons/breed.png" alt="breed-icon">
+                                <p>Breed: <span>Golder retriever</span></p>
+                            </div>
+                            <div class="line-2 flex items-center gap-3">
+                                <img src="./images/tiny-icons/birth.png" alt="birth-icon">
+                                <p>Birth: <span>2024</span></p>
+                            </div>
+                            <div class="line-3 flex items-center gap-3">
+                                <img src="./images/tiny-icons/gender.png" alt="gender-icon">
+                                <p>Gender: <span>Female</span></p>
+                            </div>
+                            <div class="line-4 flex items-center gap-3">
+                                <img src="./images/tiny-icons/price.png" alt="price-icon">
+                                <p>Price: <span>199</span>$</p>
+                            </div>
+                        </div>
+                        <div class="card-buttons w-full pt-4 flex justify-between items-center">
+                            <div class="btn border border-gray-200 bg-white">
+                                <img src="./images/tiny-icons/like.png" alt="">
+                            </div>
+                            <div class="btn border border-gray-200 bg-white w-28 text-lg text-green01">Adopt</div>
+                            <div class="btn border border-gray-200 bg-white w-28 text-lg text-green01">Details</div>
+                        </div>
+                    </div>-->
+
+                    <!-- CARD 03 -->
+                    <!--<div class="pet-card border-2 border-gray-200 rounded-xl max-w-[365px] p-6 flex flex-col justify-center items-center cursor-pointer hover:border-green-300 hover:bg-green-500/5">
+                        <div class="pet-image w-full relative">
+                            <img src="./images/rectangle-thumbnails/card-03.png" alt="card-image-01"
+                                 class="w-full h-full rounded-xl object-cover object-center">
+                        </div>
+                        <div class="border-b pet-info w-full py-4 flex flex-col gap-2">
+                            <h4 class="text-2xl font-bold">Mister Tartosh</h4>
+                            <div class="line-1 flex items-center gap-3">
+                                <img src="./images/tiny-icons/breed.png" alt="breed-icon">
+                                <p>Breed: <span>Golder retriever</span></p>
+                            </div>
+                            <div class="line-2 flex items-center gap-3">
+                                <img src="./images/tiny-icons/birth.png" alt="birth-icon">
+                                <p>Birth: <span>2024</span></p>
+                            </div>
+                            <div class="line-3 flex items-center gap-3">
+                                <img src="./images/tiny-icons/gender.png" alt="gender-icon">
+                                <p>Gender: <span>Female</span></p>
+                            </div>
+                            <div class="line-4 flex items-center gap-3">
+                                <img src="./images/tiny-icons/price.png" alt="price-icon">
+                                <p>Price: <span>199</span>$</p>
+                            </div>
+                        </div>
+                        <div class="card-buttons w-full pt-4 flex justify-between items-center">
+                            <div class="btn border border-gray-200 bg-white">
+                                <img src="./images/tiny-icons/like.png" alt="">
+                            </div>
+                            <div class="btn border border-gray-200 bg-white w-28 text-lg text-green01">Adopt</div>
+                            <div class="btn border border-gray-200 bg-white w-28 text-lg text-green01">Details</div>
+                        </div>
+                    </div>-->
+
+                </div>
+
+                <!-- LIKE GALLERY -->
+                <div class="2xl:col-span-1 xl:col-span-2 lg:col-span-2 md:col-span-2 sm:col-span-2 col-span-1 2xl:mx-0 xl:mx-auto lg:mx-auto md:mx-auto sm:mx-auto mx-auto order-2">
+                    <div id="like-gallery-container"
+                         class="border-2 border-gray-200 rounded-xl min-w-[360px] min-h-48 p-6 grid 2xl:grid-cols-2 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-1 gap-6 cursor-pointer hover:border-green-300 hover:bg-green-500/5">
+                        <!--<div class="rounded-lg w-36 h-36 relative">
+                            <img src="./images/square-thumbnails/square-1.png" alt="square-image-01"
+                                 class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="rounded-lg w-36 h-36 relative">
+                            <img src="./images/square-thumbnails/square-2.png" alt="square-image-02"
+                                 class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="rounded-lg w-36 h-36 relative">
+                            <img src="./images/square-thumbnails/square-3.png" alt="square-image-03"
+                                 class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="rounded-lg w-36 h-36 relative">
+                            <img src="./images/square-thumbnails/square-4.png" alt="square-image-04"
+                                 class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="rounded-lg w-36 h-36 relative">
+                            <img src="./images/square-thumbnails/square-5.png" alt="square-image-05"
+                                 class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="rounded-lg w-36 h-36 relative">
+                            <img src="./images/square-thumbnails/square-6.png" alt="square-image-06"
+                                 class="w-full h-full object-cover object-center">
+                        </div>-->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- DETAILS MODAL -->
+            <div id="pet_details_modal_container" class="">
+                <!--<button class="btn" onclick="pet_details_modal.showModal()">open modal</button>
+                <dialog id="pet_details_modal" class="modal">
+                    <div class="modal-box border-2 border-gray-200 rounded-xl max-w-[500px] p-6 flex flex-col justify-center items-center gap-y-0">
+
+                        &lt;!&ndash; MODAL IMAGE &ndash;&gt;
+                        <div class="pet-image w-full relative">
+                            <img src="./images/rectangle-thumbnails/card-03.png" alt="card-image-01"
+                                 class="w-full h-full object-cover object-center">
+                        </div>
+
+                        &lt;!&ndash; MODAL TITLE & INFO &ndash;&gt;
+                        <div class="border-b pet-info w-full mb-2 py-4 flex flex-col gap-2">
+                            <h4 class="text-2xl font-extrabold">Mister Tartosh</h4>
+                            <div class="flex gap-8">
+                                <div>
+                                    <div class="line-1 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/breed.png" alt="breed-icon">
+                                        <p>Breed: <span>Golder retriever</span></p>
+                                    </div>
+                                    <div class="line-2 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/gender.png" alt="gender-icon">
+                                        <p>Gender: <span>Female</span></p>
+                                    </div>
+                                    <div class="line-3 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/gender.png" alt="gender-icon">
+                                        <p>Vaccinated status: <span>Partially</span></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="line-1 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/birth.png" alt="birth-icon">
+                                        <p>Birth: <span>2024</span></p>
+                                    </div>
+                                    <div class="line-2 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/price.png" alt="price-icon">
+                                        <p>Price: <span>199</span>$</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        &lt;!&ndash; MODAL DETAILS TEXT & CLOSE BUTTON &ndash;&gt;
+                        <div class="card-buttons w-full">
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Details Information</h4>
+                                <p class="text-sm text-justify">This friendly male Golden Retriever is energetic and loyal, making him a perfect companion for families. Born on January 15, 2023, he enjoys playing outdoors and is especially great with children. Fully vaccinated, he's ready to join your family and bring endless joy. Priced at $1200, he offers love, loyalty, and a lively spirit for those seeking a playful yet gentle dog.</p>
+                            </div>
+                            <div class="modal-action w-full mt-3">
+                                <form method="dialog" class="w-full">
+                                    <button class="btn border border-gray-200 bg-white w-full text-lg text-green01 hover:border-green-300 hover:bg-green-500/5">
+                                        Cancel
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>-->
+            </div>
+
+            <!-- ADOPT MODAL -->
+            <div id="pet_adopt_modal_container" class="">
+                <!--<button class="btn" onclick="pet_details_modal.showModal()">open modal</button>
+                <dialog id="pet_details_modal" class="modal">
+                    <div class="modal-box border-2 border-gray-200 rounded-xl max-w-[500px] p-6 flex flex-col justify-center items-center gap-y-0">
+
+                        &lt;!&ndash; MODAL IMAGE &ndash;&gt;
+                        <div class="pet-image w-full relative">
+                            <img src="./images/rectangle-thumbnails/card-03.png" alt="card-image-01"
+                                 class="w-full h-full object-cover object-center">
+                        </div>
+
+                        &lt;!&ndash; MODAL TITLE & INFO &ndash;&gt;
+                        <div class="border-b pet-info w-full mb-2 py-4 flex flex-col gap-2">
+                            <h4 class="text-2xl font-extrabold">Mister Tartosh</h4>
+                            <div class="flex gap-8">
+                                <div>
+                                    <div class="line-1 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/breed.png" alt="breed-icon">
+                                        <p>Breed: <span>Golder retriever</span></p>
+                                    </div>
+                                    <div class="line-2 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/gender.png" alt="gender-icon">
+                                        <p>Gender: <span>Female</span></p>
+                                    </div>
+                                    <div class="line-3 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/gender.png" alt="gender-icon">
+                                        <p>Vaccinated status: <span>Partially</span></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="line-1 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/birth.png" alt="birth-icon">
+                                        <p>Birth: <span>2024</span></p>
+                                    </div>
+                                    <div class="line-2 flex items-center gap-2">
+                                        <img src="./images/tiny-icons/price.png" alt="price-icon">
+                                        <p>Price: <span>199</span>$</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        &lt;!&ndash; MODAL DETAILS TEXT & CLOSE BUTTON &ndash;&gt;
+                        <div class="card-buttons w-full">
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Details Information</h4>
+                                <p class="text-sm text-justify">This friendly male Golden Retriever is energetic and loyal, making him a perfect companion for families. Born on January 15, 2023, he enjoys playing outdoors and is especially great with children. Fully vaccinated, he's ready to join your family and bring endless joy. Priced at $1200, he offers love, loyalty, and a lively spirit for those seeking a playful yet gentle dog.</p>
+                            </div>
+                            <div class="modal-action w-full mt-3">
+                                <form method="dialog" class="w-full">
+                                    <button class="btn border border-gray-200 bg-white w-full text-lg text-green01 hover:border-green-300 hover:bg-green-500/5">
+                                        Cancel
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>-->
+            </div>
+
+            <!--LOADER-->
+            <div id="loader" class="hidden w-2/12 mx-auto flex flex-col items-center">
+                <span class="loading loading-bars loading-lg"></span>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+<!--MAIN SECTION ENDS HERE--------------------------------------------------------------------------------------------->
+
+
+<!--FOOTER SECTION STARTS HERE----------------------------------------------------------------------------------------->
+<footer>
+    <div class=" bg-black mt-28">
+        <div class="container 2xl:w-full xl:w-11/12 lg:w-11/12 md:w-11/12 sm:w-11/12 w-11/12 mx-auto py-28 flex flex-wrap 2xl:justify-between xl:justify-between lg:justify-between md:justify-center sm:justify-center justify-start 2xl:gap-20 xl:gap-20 lg:gap-20 md:gap-20 sm:gap-20 gap-y-16">
+
+            <!-- LEFT COLUMN -->
+            <div class="flex flex-col gap-5">
+                <div class="flex justify-start items-center gap-3">
+                    <img src="./images/logo.webp" alt="logo_image">
+                    <h1 class="text-3xl text-white font-bold">Peddy</h1>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-gray01">Location: av. Washington 165, NY CA 54003</p>
+                    <p class="text-gray01">Email: info@yourdomain.com</p>
+                    <p class="text-gray01">Phone: +31 85 964 47 25</p>
+                    <p class="text-gray01">Openings hours: 9.00 AM - 5.00 PM</p>
+                </div>
+                <div class="flex justify-start items-center gap-7">
+                    <img src="./images/social-media-icons/facebook.png" alt="facebook-icon" class="cursor-pointer">
+                    <img src="./images/social-media-icons/x.png" alt="facebook-icon" class="cursor-pointer">
+                    <img src="./images/social-media-icons/youtube.png" alt="facebook-icon" class="cursor-pointer">
+                    <img src="./images/social-media-icons/instagram.png" alt="facebook-icon" class="cursor-pointer">
+                </div>
+            </div>
+
+            <!-- MIDDLE COLUMN -->
+            <div class="flex flex-col gap-5">
+                <div class="flex justify-start items-center gap-3">
+                    <h1 class="text-lg text-white font-bold">Useful Links</h1>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-gray01 cursor-pointer">Home</p>
+                    <p class="text-gray01 cursor-pointer">About Us</p>
+                    <p class="text-gray01 cursor-pointer">Animals</p>
+                    <p class="text-gray01 cursor-pointer">Foundation</p>
+                    <p class="text-gray01 cursor-pointer">Contact</p>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="flex flex-col gap-5">
+                <div class="flex justify-start items-center gap-3">
+                    <h1 class="text-lg text-white font-bold">Drop a Message</h1>
+                </div>
+                <div class="flex flex-col py-2 gap-3">
+                    <input type="text" placeholder="Enter your email"
+                           class="input input-bordered w-72 bg-gray-500/40 text-white"/>
+                    <button class="btn btn-md w-72 border-0 bg-green01 text-lg text-white font-bold rounded-xl hover:border-green01 hover:bg-green-100 hover:text-green01">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!--FOOTER SECTION ENDS HERE------------------------------------------------------------------------------------------->
+
+<!--JAVASCRIPT LINKING STARTS HERE------------------------------------------------------------------------------------->
+<script src="./js/shared-utilities.js"></script>
+<script src="./js/script.js"></script>
+<!--JAVASCRIPT LINKING ENDS HERE--------------------------------------------------------------------------------------->
+
+</body>
+<!--BODY SECTION ENDS HERE--------------------------------------------------------------------------------------------->
+
+</html>

@@ -129,8 +129,6 @@ const createCardAndPublish = (petObject) => {
         pet_name
     } = petObject
 
-    console.log(pet_name);
-
     //Creating html card for each pet.
     let petCardHTML = `
         <div class="pet-card border-2 border-gray-200 rounded-xl max-w-[365px] p-6 flex flex-col justify-center items-center cursor-pointer hover:border-green-300 hover:bg-green-500/5">
@@ -201,12 +199,20 @@ const savePetImageInGallery = (petImage) => {
     let likeGalleryContainer = document.getElementById('like-gallery-container');
 
     let galleryThumbnailHTML = `
-        <div class="rounded-lg w-36 h-36 relative">
-            <img src="${petImage}" alt="pet_image_thumbnail"
+        <div class="rounded-lg w-36 h-36 relative cursor-pointer">
+            <img onclick="removePetImageFromGallery(this)" src="${petImage}" alt="pet_image_thumbnail"
                  class="w-full h-full rounded-lg object-cover object-center">
         </div>`;
 
     likeGalleryContainer.innerHTML += galleryThumbnailHTML;
+};
+
+/*====================================================================================================================*/
+
+const removePetImageFromGallery = (petImageThumbnailElement) => {
+
+    let likeGalleryContainer = petImageThumbnailElement.parentElement;
+    likeGalleryContainer.remove(petImageThumbnailElement);
 };
 
 /*====================================================================================================================*/
